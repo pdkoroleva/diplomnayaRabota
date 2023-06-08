@@ -1,0 +1,51 @@
+﻿<Window x:Class="DemoEkzWPF.Okna.Zadanie4UdalenieWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoEkzWPF.Okna"
+        mc:Ignorable="d"
+        Title="Задание 4. Удаление" Height="550" Width="850" MinHeight="550" MinWidth="850" Icon="/DemoEkzWPF;component/Ikonki/kitty.ico" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="18"></Setter>
+                <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                <Setter Property="TextAlignment" Value="Center"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.4,1" StartPoint="0.6,0">
+            <GradientStop Color="#FF8037B2" Offset="0"/>
+            <GradientStop Color="#FFE3FF85" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <TextBlock Text="Задание 4. Удаление"  Grid.Column="0" TextWrapping="Wrap" FontSize="36" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold" Width="391" Height="50" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <TextBlock.RenderTransform>
+                <RotateTransform Angle="-90"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Border Grid.Column="1" Background="White" Margin="50,25,25,50" Opacity="0.7" CornerRadius="30" Padding="50">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Margin="0,0,0,10">Реализуйте удаление товаров из каталога магазина игрушек. 
+                    <Run Foreground="#FF3C4BAA" FontWeight="Bold">Данное задание является продолжением
+                    для задания к выводу, добавлению и реадактировани, поэтому, если не выполняли ранее - вернитесь к прошлой теме.</Run></TextBlock>
+                <TextBlock Foreground="#FF3C4BAA" FontWeight="Bold" FontSize="36" Margin="0,0,0,10">Обязательно!</TextBlock>
+                <TextBlock HorizontalAlignment="Left" Margin="30,0,0,0"><Run Foreground="#FF3C4BAA" FontWeight="Bold">1.</Run> Реализуйте удаление по кнопке внутри блока удаляемого товара</TextBlock>
+                <TextBlock HorizontalAlignment="Left" Margin="30,0,0,0" TextAlignment="Left"><Run Foreground="#FF3C4BAA" FontWeight="Bold">2.</Run> Не забывайте, что удаляемый товар не может быть упомянут в других таблицах (например - заказы), иначе связь будет нарушена</TextBlock>
+                <TextBlock HorizontalAlignment="Left" Margin="30,0,0,0"><Run Foreground="#FF3C4BAA" FontWeight="Bold">3.</Run> Не забывайте о фатальных ошибках при обработке кнопок</TextBlock>
+            </StackPanel>
+        </Border>
+        <Button x:Name="KTeoriiButton" Click="KTeoriiButtonClick" Height="40" Width="148" Background="#FF6E3CAA" FontFamily="Century Gothic" FontSize="18" Foreground="White" Margin="50,0,25,5" Cursor="Hand" VerticalAlignment="Bottom" FontWeight="Bold">К теории</Button>
+    </Grid>
+</Window>

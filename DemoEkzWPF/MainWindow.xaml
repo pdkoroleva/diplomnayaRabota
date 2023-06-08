@@ -1,0 +1,56 @@
+﻿<Window x:Class="DemoEkzWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoEkzWPF"
+        mc:Ignorable="d"
+        Title="Начало работы" Height="550" Width="850"  MinHeight="550" MinWidth="850" Icon="Ikonki/kitty.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15"></Setter>
+                <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                <Setter Property="Margin" Value="60,0,60,20"></Setter>
+                <Setter Property="TextAlignment" Value="Center"></Setter>
+            </Style>
+            <Style TargetType="Button">
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Style.Resources>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.4,1" StartPoint="0.6,0">
+            <GradientStop Color="#FF3D37B2" Offset="0"/>
+            <GradientStop Color="#FFFFEE85" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Border Background="White" Margin="25" Opacity="0.7" CornerRadius="30">
+            <Grid>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock FontSize="36" FontWeight="Bold" Margin="60,0,60,10" Foreground="#FF3C4BAA">Приветствуем Вас</TextBlock>
+                    <TextBlock FontSize="18" FontWeight="Bold">в приложении для подготовки к демонстрационному 
+                    экзамену в компетенции «Программные решения для бизнеса». 
+                    В нем представлены основные моменты, на которые стоит обратить внимание в 
+                    разделе разработки.</TextBlock>
+                    <Button x:Name="NachatButton" Click="NachatButtonClick" Height="45" Width="220" Background="#FF3C4BAA" FontFamily="Century Gothic" FontSize="20" Foreground="White">Начать обучение</Button>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                    <TextBlock FontSize="12" Margin="20,0" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                    Приложение разработано студенткой </TextBlock>
+                    <TextBlock FontSize="12" Margin="20,0" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                    группы ИС1-41 Королевой Полиной.</TextBlock>
+                    <TextBlock FontSize="14" FontWeight="Bold" VerticalAlignment="Bottom" Margin="20,0,60,12" HorizontalAlignment="Left">
+                    Выпуск 2023</TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Image Source="Kartinki/kitty.png" ToolTip="Это Кот-ученый, он будет сопровождать Вас в WPF-путешествии" Width="195" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,-18,0"/>
+    </Grid>
+</Window>

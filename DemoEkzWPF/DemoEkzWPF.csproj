@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5A87970-57D0-48A1-98E5-C3A909D8C079}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DemoEkzWPF</RootNamespace>
+    <AssemblyName>DemoEkzWPF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.Debugger.Interop, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=7.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.7.0.1\lib\net462\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Okna\FiltraciaWindow.xaml.cs">
+      <DependentUpon>FiltraciaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\RezultatWindow.xaml.cs">
+      <DependentUpon>RezultatWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\SortirovkaWindow.xaml.cs">
+      <DependentUpon>SortirovkaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\Zadanie1VyvodWindow.xaml.cs">
+      <DependentUpon>Zadanie1VyvodWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\Zadanie2DobavlenieWindow.xaml.cs">
+      <DependentUpon>Zadanie2DobavlenieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\Zadanie3IzmenenieWindow.xaml.cs">
+      <DependentUpon>Zadanie3IzmenenieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\Zadanie4UdalenieWindow.xaml.cs">
+      <DependentUpon>Zadanie4UdalenieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\ZakluchenieWindow.xaml.cs">
+      <DependentUpon>ZakluchenieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stranicy\CsCBPage.xaml.cs">
+      <DependentUpon>CsCBPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stranicy\OtobrazhenieCBPage.xaml.cs">
+      <DependentUpon>OtobrazhenieCBPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stranicy\XamlCBPage.xaml.cs">
+      <DependentUpon>XamlCBPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Okna\AvtorizaciaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\DobavlenieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\FatalnyeOshibkiWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\FiltraciaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\IzmenenieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\PodkluchenieBDWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\PoiskWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\RazmetkaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\RezultatWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\SoderzhanieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\SortirovkaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\StrukturaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\UdalenieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\Vazhno1StrWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\VyvodWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\Zadanie1VyvodWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\Zadanie2DobavlenieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\Zadanie3IzmenenieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\Zadanie4UdalenieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\ZakluchenieWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okna\ZapolnenieCBWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stranicy\CsCBPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stranicy\OtobrazhenieCBPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stranicy\XamlCBPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Okna\AvtorizaciaWindow.xaml.cs">
+      <DependentUpon>AvtorizaciaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\DobavlenieWindow.xaml.cs">
+      <DependentUpon>DobavlenieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\FatalnyeOshibkiWindow.xaml.cs">
+      <DependentUpon>FatalnyeOshibkiWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\IzmenenieWindow.xaml.cs">
+      <DependentUpon>IzmenenieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\PodkluchenieBDWindow.xaml.cs">
+      <DependentUpon>PodkluchenieBDWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\PoiskWindow.xaml.cs">
+      <DependentUpon>PoiskWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\RazmetkaWindow.xaml.cs">
+      <DependentUpon>RazmetkaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\SoderzhanieWindow.xaml.cs">
+      <DependentUpon>SoderzhanieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\StrukturaWindow.xaml.cs">
+      <DependentUpon>StrukturaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\UdalenieWindow.xaml.cs">
+      <DependentUpon>UdalenieWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\Vazhno1StrWindow.xaml.cs">
+      <DependentUpon>Vazhno1StrWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\VyvodWindow.xaml.cs">
+      <DependentUpon>VyvodWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okna\ZapolnenieCBWindow.xaml.cs">
+      <DependentUpon>ZapolnenieCBWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Dokumenty\AvtorizaciaRoli.docx" />
+    <None Include="Dokumenty\Dobavlenie.docx" />
+    <None Include="Dokumenty\Izmenenie.docx" />
+    <None Include="Dokumenty\PodkluchenieBD.docx" />
+    <None Include="Dokumenty\Udalenie.docx" />
+    <None Include="Dokumenty\VyvodIzBD.docx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ikonki\kitty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kartinki\kitty_teach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kartinki\kitty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kartinki\kitty_teach2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kartinki\kitty_word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kartinki\ComboBox.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kartinki\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kartinki\shablon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

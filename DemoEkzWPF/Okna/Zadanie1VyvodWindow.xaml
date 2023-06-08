@@ -1,0 +1,50 @@
+﻿<Window x:Class="DemoEkzWPF.Okna.Zadanie1VyvodWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoEkzWPF.Okna"
+        mc:Ignorable="d"
+        Title="Задание 1. Вывод" Height="550" Width="850" MinHeight="550" MinWidth="850" Icon="/DemoEkzWPF;component/Ikonki/kitty.ico" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="18"></Setter>
+                <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                <Setter Property="TextAlignment" Value="Center"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.4,1" StartPoint="0.6,0">
+            <GradientStop Color="#FF8037B2" Offset="0"/>
+            <GradientStop Color="#FFE3FF85" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <TextBlock Text="Задание 1. Вывод"  Grid.Column="0" TextWrapping="Wrap" FontSize="36" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold" Width="329" Height="50" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <TextBlock.RenderTransform>
+                <RotateTransform Angle="-90"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Border Grid.Column="1" Background="White" Margin="50,25,25,50" Opacity="0.7" CornerRadius="30" Padding="50">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Margin="0,0,0,10">Вам необходимо реализовать таблицы в своей БД для магазина игрушек.
+                    После реализации таблиц и их заполнения <Run Foreground="#FFA7B0EC" FontStyle="Italic">(проявите фантазию!)</Run> 
+                    выведите все товары в соответствии с нижепредставленным шаблоном.</TextBlock>
+                <Image Source="/DemoEkzWPF;component/Kartinki/shablon.png" Height="180" Margin="0,0,0,10"/>
+                <TextBlock Foreground="#FF11194D" Margin="0,0,0,10">Не забывайте, 
+                    что Ваши таблички должны соответствовать <Run Foreground="#FF3C4BAA" FontWeight="Bold">3 нормальной форме</Run>.</TextBlock>
+            </StackPanel>
+        </Border>
+        <Button x:Name="KTeoriiButton" Click="KTeoriiButtonClick" Height="40" Width="148" Background="#FF6E3CAA" FontFamily="Century Gothic" FontSize="18" Foreground="White" Margin="50,0,25,5" Cursor="Hand" VerticalAlignment="Bottom" FontWeight="Bold">К теории</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,78 @@
+﻿<Window x:Class="DemoEkzWPF.Okna.SoderzhanieWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoEkzWPF.Okna"
+        mc:Ignorable="d"
+        Title="Содержание" Height="550" Width="850" MinHeight="550" MinWidth="850" Icon="/DemoEkzWPF;component/Ikonki/kitty.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15"></Setter>
+                <Setter Property="FontFamily" Value="Century Gothic"></Setter>
+                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                <Setter Property="Margin" Value="60,0,60,20"></Setter>
+                <Setter Property="TextAlignment" Value="Center"></Setter>
+            </Style>
+            <Style TargetType="Button">
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"></Setter>
+                    </Style>
+                </Style.Resources>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.4,1" StartPoint="0.6,0">
+            <GradientStop Color="#FF3D37B2" Offset="0"/>
+            <GradientStop Color="#FFFFEE85" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Margin="60,0" FontWeight="Bold" FontSize="36" Foreground="White">Содержание</TextBlock>
+            <Border Grid.Row="1" Background="White" Margin="25,0,25,25" Opacity="0.7" CornerRadius="30" Padding="20,5">
+                <Grid Margin="0,10" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="StrukturaTextBlock" MouseDown="StrukturaTextBlockMouseDown" Grid.Row="0" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">1. Структура проекта – папки, названия элементов</TextBlock>
+                    <TextBlock x:Name="RazmetkaTextBlock" MouseDown="RazmetkaTextBlockMouseDown" Grid.Row="1" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">2. Разметка страницы. Переключение элементов с помощью Tab</TextBlock>
+                    <TextBlock x:Name="PodkluchenieTextBlock" MouseDown="PodkluchenieTextBlockMouseDown" Grid.Row="2" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">3. Подключение к базе данных</TextBlock>
+                    <TextBlock x:Name="FatalnyeOshTextBlock" MouseDown="FatalnyeOshTextBlockMouseDown"  Grid.Row="3" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">4. Предотвращение фатальных ошибок</TextBlock>
+                    <TextBlock x:Name="AvtorizaciaTextBlock" MouseDown="AvtorizaciaTextBlockMouseDown"  Grid.Row="4" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">5. Авторизация по ролям</TextBlock>
+                    <TextBlock x:Name="VyvodTextBlock" MouseDown="VyvodTextBlockMouseDown" Grid.Row="5" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">6. Вывод данных из базы данных</TextBlock>
+                    <TextBlock x:Name="DobavlenieTextBlock" MouseDown="DobavlenieTextBlockMouseDown" Grid.Row="6" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">7. Добавление</TextBlock>
+                    <TextBlock x:Name="IzmenenieTextBlock" MouseDown="IzmenenieTextBlockMouseDown" Grid.Row="7" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">8. Изменение</TextBlock>
+                    <TextBlock x:Name="UdalenieTextBlock" MouseDown="UdalenieTextBlockMouseDown" Grid.Row="8" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">9. Удаление</TextBlock>
+                    <TextBlock x:Name="PoiskTextBlock" MouseDown="PoiskTextBlockMouseDown" Grid.Row="9" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">10. Поиск</TextBlock>
+                    <TextBlock x:Name="ZapolnenieCBTextBlock" MouseDown="ZapolnenieCBTextBlockMouseDown" Grid.Row="10" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">11. Заполнение ComboBox'ов из базы данных</TextBlock>
+                    <TextBlock x:Name="SortirovkaTextBlock" MouseDown="SortirovkaTextBlockMouseDown" Grid.Row="11" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">12. Сортировка</TextBlock>
+                    <TextBlock x:Name="FiltraciaTextBlock" MouseDown="FiltraciaTextBlockMouseDown" Grid.Row="12" FontSize="16" TextDecorations="Underline" Margin="60,0,60,5" Cursor="Hand">13. Фильтрация</TextBlock>
+                    <TextBlock x:Name="ZakluchenieTextBlock" MouseDown="ZakluchenieTextBlockMouseDown"  Grid.Row="13" FontSize="16" TextDecorations="Underline" Margin="60,0" FontWeight="Bold" Cursor="Hand">Заключение</TextBlock>
+                    <Button x:Name="SnachalaButton" Click="SnachalaButtonClick" Grid.Row="14" Height="40" Width="196" Background="#FF3C4BAA" FontFamily="Century Gothic" FontSize="16" Foreground="White" Margin="0,5,0,0">Начать сначала</Button>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Page x:Class="DemoEkzWPF.Stranicy.CsCBPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DemoEkzWPF.Stranicy"
+      mc:Ignorable="d" 
+      d:DesignHeight="215" d:DesignWidth="667"
+      Title="XamlCBPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="18"></Setter>
+                <Setter Property="FontFamily" Value="Consolas"></Setter>
+                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Margin="20,10" VerticalAlignment="Center">
+        <StackPanel>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Century Gothic" Margin="8,0,0,8">Прописываем после инициализации еще одну строчку:</TextBlock>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0">InitializeComponent();</TextBlock>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10" Foreground="#FFBB2727" FontWeight="Bold"> DataContext = this;</TextBlock>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Century Gothic" Margin="8,0,0,8">И задаем переменную, содержащую список стран из соответствующей таблицы в БД:</TextBlock>
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" Foreground="#FFBB2727" FontWeight="Bold">public List⟨ KURS_Strana ⟩ stranas { get; set; } = App.Context.KURS_Strana.ToList();</TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
